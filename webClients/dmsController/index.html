@@ -1,0 +1,95 @@
+<html>
+<head>
+
+  <style>
+    body
+    {
+      font-family: helvetica, arial, sans-serif;
+      font-size: 16px;
+    }
+    table
+    {
+      border-collapse: collapse;
+      border: 1px solid black;
+    }
+    th
+    {
+      background: #220099;
+      color: white;
+      font-size: 20px
+    }
+    tr:nth-child(even)
+    {
+      background: #cccccc;
+    }
+    tr:nth-child(odd)
+    {
+      background: #ffffff;
+    }
+    #top
+    {
+      width: 900px;
+      height: 510px;
+      /*border: 2px solid black;*/
+    }
+    #bottom
+    {
+      width: 900px;
+      height: 70px;
+      /*border: 2px solid black;*/
+    }
+    #cvs
+    {
+      background: url(images/cityMap3.jpg);
+      float: left;
+    }
+    #infoTable
+    {
+      float: left;
+      width: 200px;
+    }
+    #setAction
+    {
+      width: 100px;
+      height: 40px;
+      line-height: 40px;
+      background: #3333cc;
+      cursor: pointer;
+      text-align: center;
+    }
+  </style>
+
+  <script src="scripts/buildings.js"></script>
+  <script src="scripts/drone.js"></script>
+  <script src="scripts/representation.js"></script>
+  <script src="scripts/main.js"></script>
+</head>
+<body>
+  <div id="top">
+    <canvas id="cvs"></canvas>
+    <table id="infoTable">
+      <tr>  
+        <th>DroneID</th>
+        <th>DroneState</th>
+        <th>Position</th>
+      </tr>
+    </table>
+  </div>
+  <div id="bottom">
+    <div id="uiOptions">
+      Drone:
+      <select id="droneList"></select>
+      Action:
+      <select id="droneAction">
+        <option id="approachGround">approachGround</option>
+        <option id="outOfPower">outOfPower</option>
+        <option id="idle">idle</option>
+        <option id="surveyPowerLines">surveyPowerLines</option>
+        <option id="environmentalHazard">environmentalHazard</option>
+        <option id="browse">browse</option>
+      </select>
+      <div id="setAction">set action</div>
+    </div>
+  </div>
+</body>
+</html>
